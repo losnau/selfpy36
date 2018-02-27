@@ -8,9 +8,9 @@ y1=[]
 y2=[]
 x1=[]
 temp=0
-with open("1.csv", "rt", encoding="gbk") as vsvfile:
+with open("temprature.csv", "rt", encoding="gbk") as vsvfile:
     reader = csv.reader(vsvfile)
-    #reader=pd.read_csv("1.csv", header=False)
+    #reader=pd.read_csv("temprature.csv", header=False)
     print(type(reader))
     for row in reader:
         if temp==100:
