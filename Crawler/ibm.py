@@ -3,8 +3,7 @@ import  requests
 from openpyxl.workbook import Workbook
 from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font
 from bs4 import  BeautifulSoup
-soup=BeautifulSoup(open('test.txt'),'html.parser')
-items=soup.find_all('tr')
+
 data={
     'site_id':'10',
     'contentarea_by':'Linux',
@@ -22,7 +21,7 @@ data={
 }
 others='site_id=10&contentarea_by=Linux&sort_by=&sort_order=2&topic_by=&product_by=&type_by=%E6%89%80%E6%9C%89%E7%B1%BB%E5%88%AB&show_abstract=false&search_by=&industry_by=&series_title_by='
 base_url='https://www.ibm.com/developerworks/cn/views/linux/libraryview.jsp'
-print(type(items)) 
+
 #保存excel
 # 在内存中创建一个workbook对象，而且会至少创建一个 worksheet
 wb = Workbook()
@@ -45,7 +44,7 @@ for i in range(0,18):
     # st_en='start='+str(i*100)+'&end='+str((i+1)*100-1)
     # url=base_url+st_en+others
     # print url
-    print('----------------------------第'+row+'行') 
+    print('----------------------------第'+str(row)+'行')
     data['start']=str(i*100)
     data['end'] =str((i+1)*100-1)
     response=requests.get(base_url,data)
@@ -71,5 +70,4 @@ for i in range(0,18):
         column=column+1
         # 行+1
         row = row + 1
-
 wb.save('ibm.xlsx')
