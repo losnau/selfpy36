@@ -1,4 +1,7 @@
 # -*- coding:utf-8
+'''
+填写年月，用户名和密码，自动签到一个月
+'''
 import calendar,datetime,time
 import requests
 
@@ -25,7 +28,7 @@ class OA():
         self.s = requests.Session()
         login_url = 'https://oa.shijinshi.cn/sjsinfo/main/login'
         r=self.s.post(self.login_url, data=self.login_data, verify=False)
-        #print r.status_code
+        #print(r.status_code) 
 
     def getstmap(self,year, month):
         li = [0, 1, 2, 3, 4]
@@ -38,7 +41,7 @@ class OA():
             s = datetime.datetime(year, month, day + 1).weekday()
             if s in li:
                 sj = str(year) + '-' + str(month) + '-' + str(day + 1) + hms
-                #print sj
+                #print(sj)
                 # 转换成时间数组
                 timeArray = time.strptime(sj, "%Y-%m-%d %H:%M:%S")
                 # 将时间数组转换成时间戳
@@ -46,14 +49,14 @@ class OA():
                 self.gs_data['workTime']= long(timestamp * 1000)
                 if self.gs_data['workTime'] in tm10:
                     continue
-                print sj+'------',
-                print self.gs_data['workTime']
+                print(sj+'------',) 
+                print(self.gs_data['workTime']) 
                 #self.gs_data['workTime'] = 1506614400000
                 response2 = self.s.post(self.gs_url, data=self.gs_data, verify=False)
 
                 #exit(0)
-                print response2.status_code
-                # print response2.content
-               # print "%Ld" % (timestamp * 1000)
+                print(response2.status_code) 
+                # print(response2.content) 
+                # print("%Ld" % (timestamp * 1000)) 
 oa=OA()
 oa.getstmap(2018,01)
