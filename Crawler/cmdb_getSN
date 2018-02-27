@@ -1,0 +1,54 @@
+# -*- coding:utf-8
+'''
+模拟登陆公司的CMDB，获取服务器的SN,仅用作requests学习
+
+代码可以尝试使用requests的Session()来优化
+'''
+import requests
+import cookielib
+base_url="http://cmdb.shijinshi.cn"
+login_url="http://cmdb.shijinshi.cn/login/?next=/"
+data_url="http://cmdb.shijinshi.cn/data_center/datacenterasset/?all="
+url2='http://cmdb.shijinshi.cn/data_center/datacenterasset/?all=&model__category=1&rack__server_room__data_center=2'
+data={
+    'username': "admin",
+    'password': "xxxxx",
+    'csrfmiddlewaretoken':""
+}
+header={
+"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0",
+"Host": "cmdb.shijinshi.cn",
+"Referer": "http://cmdb.shijinshi.cn/login/?next=/",
+"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+"Accept-Language": "zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",
+"Accept-Encoding": "gzip, deflate",
+"Connection": "keep-alive",
+"Upgrade-Insecure-Requests": "1",
+"Cache-Control": "max-age=0"
+}
+
+r=requests.get(login_url,headers = header)
+print('第一次http_code：'+r.status_code) 
+print('第一次cookies：'+dict(r.cookies)) 
+j=dict(r.cookies)
+data['csrfmiddlewaretoken']=j['csrftoken']
+print('重组之后的data：'+data) 
+#print( co=dict(r.cookies) if not isinstance(r.cookies,dict) else r.cookies) 
+t=requests.post(login_url,data=data,headers=header,cookies=r.cookies)
+print('请求的网址'+t.url) 
+print('服务器响应头：t.headers'+t.headers) 
+print('响应http code：'+t.status_code) 
+
+print('客户端发送给服务器的请求头部：'+t.request.headers) 
+print('cookies'+t.cookies) 
+fang=requests.get(url2,headers=t.request.headers)
+#print(fang.content) 
+print('这个才是最终我们需要的cookies（有了这个cookies，我们就可以访问这个网站的任意网页了）：'+fang.cookies) 
+print('请求网址：'+fang.url) 
+print('响应头部：'+fang.headers) 
+url2='http://cmdb.shijinshi.cn/data_center/datacenterasset/?all=&model__category=1&rack__server_room__data_center=2'
+fang2=requests.get(base_url,cookies=fang.cookies)
+print(fang2.content) 
+# response = s.get(data_url)
+# print(response.content) 
+# print(response.cookies)
