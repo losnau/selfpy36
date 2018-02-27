@@ -30,12 +30,11 @@ x=range(len(x1))
 plt.figure(figsize=(20,15)) #创建绘图对象
 plt.subplot(211)    #这个必须放在plt.plo前面
 plt.plot(x, y1, 'ro--',label="送风温度", color="green", linewidth=1)   #在当前绘图对象绘图（X轴，Y轴，蓝色虚线，线宽度）
-#替换X轴，用定义的文本显示，X1为文本内容
+#替换X轴，用定义的文本显示，x1为文本内容   len(x1) = len(x)
 plt.xticks(x,x1,rotation = 90)
 plt.xlabel(u"日期时间") #X轴标签
 plt.ylabel(u"送风温度")  #Y轴标签
 plt.title(u"送风温度图") #图标题
-
 
 plt.subplot(212)
 plt.plot(x,y2,"ro--",label="回风温度", color="green",linewidth=1)   #在当前绘图对象绘图（X轴，Y轴，蓝色虚线，线宽度）
