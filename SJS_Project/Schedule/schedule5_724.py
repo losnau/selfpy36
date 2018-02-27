@@ -1,4 +1,4 @@
-'''python
+
 import random
 from collections import Counter
 class panduan():
@@ -124,4 +124,3 @@ while True:
                 for paiban in paibans:
                     print(paiban)
             exit(0)
-'''
