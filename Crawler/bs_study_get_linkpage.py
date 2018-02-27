@@ -4,12 +4,11 @@ import bs4
 soup=BeautifulSoup(open('content.text'),'html.parser')
 titles=soup.find_all('div',class_='title')
 for title in titles:
-
-    print title.a['href'],'-------',
+    print(title.a['href']+'-------') 
     if type(title.a.string) == bs4.element.Comment:
-        print title.a.string
+        print(title.a.string) 
     else:
         for name in title.stripped_strings:
-            print name.strip()
-#print type(soup)
+            print(name.strip()) 
+#print(type(soup)) 
 #right_info
