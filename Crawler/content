@@ -1,0 +1,1085 @@
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="zh-CN">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="zh-CN">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="zh-CN" xmlns:wb="http://open.weibo.com/wb">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>运维干货 &#8211; 运维派</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:1024px)" href="http://www.yunweipai.com/wp-content/themes/zYwp/style.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1023px)" href="http://www.yunweipai.com/wp-content/themes/zYwp/style-mob.css"/>
+<link rel="pingback" href="http://www.yunweipai.com/xmlrpc.php" />
+<link rel="shortcut icon" href="http://www.yunweipai.com/wp-content/themes/zYwp/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="http://www.yunweipai.com/wp-content/themes/zYwp/includes/js/jquery-1.7.2.min.js"></script>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://www.yunweipai.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='z-ratings-css'  href='http://www.yunweipai.com/wp-content/themes/zYwp/z-ratings/z-ratings.css?ver=1.0' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='http://www.yunweipai.com/wp-json/' />
+<meta name="keywords" content="运维干货">
+<meta name="description" content="运维派'运维干货'">
+<!--[if lt IE 9]>
+<script src="http://www.yunweipai.com/wp-content/themes/zYwp/includes/js/html5.js"></script>
+<script src="http://www.yunweipai.com/wp-content/themes/zYwp/includes/js/respond.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+
+<div id="head" class="fixbar">
+
+	<div id="header">
+		<div id="header-left">
+			<a id="logo" href="http://www.yunweipai.com"><img src="http://www.yunweipai.com/wp-content/themes/zYwp/images/logo1.png" alt="运维派-IT运维技术社区_运维学习交流平台_DevOps_自动化运维"></a>
+		</div>
+		<script type="text/javascript">
+			jQuery(document).ready(function($)
+			{
+				var retina = window.devicePixelRatio > 1 ? true : false;
+				if(retina)
+				{
+					jQuery('#logo img').attr('src', 'http://www.yunweipai.com/wp-content/themes/zYwp/images/logo2.png');
+					jQuery('#logo img').attr('width', '');
+					jQuery('#logo img').attr('height', '');
+				}
+			});
+		</script>
+
+		<a class="menu1 menuopen">菜单</a>
+
+		<div id="header-right">
+
+			<a id="btn_search" href="javascript:void(0)" onclick="showSearch();" >搜索</a>
+
+			<a id="btn_tougao" href="http://www.yunweipai.com/tougao" >投稿</a>
+
+			<div id="search">
+				<form role="search" method="get" id="searchform" action="http://www.yunweipai.com">
+					<input type="text" value="" name="s" id="s" placeholder="搜索" />
+					<input type="submit" id="searchsubmit" value="搜索">
+					<a id="btn_search_close" href="javascript:void(0)" onclick="closeSearch();" >关闭</a>
+				</form>
+			</div>
+
+			<div id="navi">
+			<ul id="menu1" class="menu"><li id="menu-item-11562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-11562"><a href="http://www.yunweipai.com/">首页</a></li>
+<li id="menu-item-11563" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-11563"><a href="http://www.yunweipai.com/category/jingyan">运维干货</a></li>
+<li id="menu-item-11564" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11564"><a href="http://www.yunweipai.com/category/news">运维资讯</a></li>
+<li id="menu-item-11581" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11581"><a href="http://www.yunweipai.com/category/zatan">运维杂谈</a></li>
+<li id="menu-item-13808" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13808"><a href="http://www.yunweipai.com/category/tiku">运维题库</a></li>
+<li id="menu-item-11584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11584"><a href="http://www.yunweipai.com/category/devops">DevOps</a></li>
+<li id="menu-item-12882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12882"><a>更多</a>
+<ul  class="sub-menu">
+	<li id="menu-item-11580" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11580"><a href="http://www.yunweipai.com/category/zhichang">运维职场</a></li>
+	<li id="menu-item-13648" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13648"><a href="http://www.yunweipai.com/category/idcops">机房运维</a></li>
+	<li id="menu-item-17229" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17229"><a href="http://www.yunweipai.com/category/safenews">网络安全</a></li>
+	<li id="menu-item-13003" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13003"><a href="http://www.yunweipai.com/category/huodong">运维活动</a></li>
+</ul>
+</li>
+<li id="menu-item-11583" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11583"><a href="http://www.yunweipai.com/aboutus">关于</a></li>
+</ul>			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<div id="container">
+
+
+
+<div id="wrap">
+
+	<div class="list-title">
+		<h2>
+			<span>运维干货</span>
+		</h2>
+	</div>
+
+	<div id="content">
+
+		<div id="boxes">
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22726.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/03/mysql-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="MySQL" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22726.html" rel="bookmark" target=_blank>						MySQL主从延迟复制实践及生产故障案例恢复实践<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>1.MySQL主从延迟复制介绍
+
+从MySQL5.6开始支持了主从延迟复制，这个功能主要解决的问题是，当主库有逻辑的数据删除或错误更新后，所有的...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/mysql" rel="tag">mysql</a>, <a href="http://www.yunweipai.com/tags/%e6%95%b0%e6%8d%ae%e5%ba%93" rel="tag">数据库</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 322</span>
+						<span class="loves">点赞 0</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-16 23:51</span>
+						<span class="date" id="date2">2天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22713.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/t01a2cf7a34122ac46d-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22713.html" rel="bookmark" target=_blank>						微软亚研院的AIOps底层算法： KPI快速聚类<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>导读
+智能运维中存在海量时序数据（KPI）需要监控、检测异常、关联， 而AIOps的一个底层算法就是把大规模时序数据快速准确地聚类成有...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/aiops" rel="tag">AIOps</a>, <a href="http://www.yunweipai.com/tags/kpi" rel="tag">KPI</a>, <a href="http://www.yunweipai.com/tags/%e5%be%ae%e8%bd%af" rel="tag">微软</a>, <a href="http://www.yunweipai.com/tags/%e6%95%b0%e6%8d%ae" rel="tag">数据</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 316</span>
+						<span class="loves">点赞 0</span>
+						<span class="comment">评论 1</span>
+						<span class="date" id="date1">2017-09-14 23:02</span>
+						<span class="date" id="date2">4天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22697.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/07/1-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="系统" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22697.html" rel="bookmark" target=_blank>						如何打造一个日均PV千万级别的大型系统？<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>作者介绍
+周金桥，具有丰富的系统规划、设计、开发、运维及团队组织管理工作经验，熟悉.Net、J2EE技术架构及应用。微软2008-2012五届最...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e5%a4%a7%e5%9e%8b%e7%b3%bb%e7%bb%9f" rel="tag">大型系统</a>, <a href="http://www.yunweipai.com/tags/%e6%9e%b6%e6%9e%84" rel="tag">架构</a>, <a href="http://www.yunweipai.com/tags/%e7%b3%bb%e7%bb%9f" rel="tag">系统</a>, <a href="http://www.yunweipai.com/tags/%e8%bf%90%e7%bb%b4%e9%83%a8%e7%bd%b2" rel="tag">运维部署</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 491</span>
+						<span class="loves">点赞 1</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-13 21:56</span>
+						<span class="date" id="date2">5天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22663.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/05/redis-250x165.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Redis" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22663.html" rel="bookmark" target=_blank>						Redis 备份、容灾及高可用实战<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+作者介绍
+郝朝阳，宜搜科技，运维工程师，负责前端运维工作。专注于运维自动化的实现。致力于DevOps思想的推广，帮助企业形成形成自...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/redis" rel="tag">Redis</a>, <a href="http://www.yunweipai.com/tags/redis-%e5%a4%87%e4%bb%bd" rel="tag">Redis 备份</a>, <a href="http://www.yunweipai.com/tags/%e5%ae%b9%e7%81%be" rel="tag">容灾</a>, <a href="http://www.yunweipai.com/tags/%e9%ab%98%e5%8f%af%e7%94%a8" rel="tag">高可用</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 653</span>
+						<span class="loves">点赞 4</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-12 09:26</span>
+						<span class="date" id="date2">7天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22649.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/07/1-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="系统" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22649.html" rel="bookmark" target=_blank>						凤凰网：基于服务树的监控系统实践<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+作者介绍
+kun：凤凰网运维开发，负责公司运维自动化平台设计开发，InfluxDB contributer、open-falcon contributer 、golang爱好者。
+一、传统监控系...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e5%87%a4%e5%87%b0%e7%bd%91" rel="tag">凤凰网</a>, <a href="http://www.yunweipai.com/tags/%e6%9c%8d%e5%8a%a1%e6%a0%91" rel="tag">服务树</a>, <a href="http://www.yunweipai.com/tags/%e7%9b%91%e6%8e%a7%e7%b3%bb%e7%bb%9f" rel="tag">监控系统</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 508</span>
+						<span class="loves">点赞 1</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-11 23:45</span>
+						<span class="date" id="date2">7天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22621.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/07/1-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="系统" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22621.html" rel="bookmark" target=_blank>						理解MySQL的SSL连接<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>1. 概述
+不仅仅是https站点，ssl连接在各个方面都慢慢流行起来了，像mysql5.7以后默认就开启了ssl连接，这篇文章主要介绍下mysql在ssl加密连...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/mysql" rel="tag">mysql</a>, <a href="http://www.yunweipai.com/tags/ssl%e8%bf%9e%e6%8e%a5" rel="tag">SSL连接</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 477</span>
+						<span class="loves">点赞 0</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-10 23:12</span>
+						<span class="date" id="date2">8天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22610.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/04/database-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22610.html" rel="bookmark" target=_blank>						关于数据库优化的一些感想和建议<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>今天不写优化，说点感想和建议（昨天就要发的，结果第一次用手机操作，发错了，只发出去一张网上找的美图）：
+在oracle做研发和售后...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/sql%e4%bc%98%e5%8c%96" rel="tag">SQL优化</a>, <a href="http://www.yunweipai.com/tags/%e6%95%b0%e6%8d%ae%e5%ba%93" rel="tag">数据库</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/2/" title="Gavin" class="avatar">
+								Gavin							</a>
+						</span>
+						<span class="views">阅读 553</span>
+						<span class="loves">点赞 0</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-09 08:58</span>
+						<span class="date" id="date2">10天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22588.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/1.webp_7-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Web" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22588.html" rel="bookmark" target=_blank>						维护了这么久的服务器，你真的认识 Web 缓存体系？<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+
+作者简介：
+赵舜东
+中国SaltStack用户组发起人
+江湖人称：赵班长，曾在武警某部负责指挥自动化的架构和运维工作，2008年退役后一直从...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/web" rel="tag">web</a>, <a href="http://www.yunweipai.com/tags/%e6%9c%8d%e5%8a%a1%e5%99%a8" rel="tag">服务器</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 810</span>
+						<span class="loves">点赞 5</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-08 13:28</span>
+						<span class="date" id="date2">10天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22574.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/14-250x165.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22574.html" rel="bookmark" target=_blank>						一个MySQL 5.7分区表性能下降的案例分析与排查<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>作者介绍
+姜宇祥，2012年加入携程，10年数据库核心代码开发经验，相关开发涉及达梦、MySQL数据库。现致力于携程MySQL的底层研发，为特殊...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/mysql" rel="tag">mysql</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 452</span>
+						<span class="loves">点赞 3</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-08 09:44</span>
+						<span class="date" id="date2">11天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22536.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/13-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="MongoDB" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22536.html" rel="bookmark" target=_blank>						从零开始搭建MongoDB数据库即服务<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+讲师介绍
+郑涔
+阿里云数据库技术专家
+
+目前主要参与阿里云MongoDB云数据库的研发，致力于让开发者用上最好的MongoDB云服务；
+主要关注分...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/mongodb" rel="tag">MongoDB</a>, <a href="http://www.yunweipai.com/tags/%e6%95%b0%e6%8d%ae%e5%ba%93" rel="tag">数据库</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 665</span>
+						<span class="loves">点赞 2</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-07 22:43</span>
+						<span class="date" id="date2">11天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22525.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/12-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22525.html" rel="bookmark" target=_blank>						京东自建数据中心核心技术解密:基础设施<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+和百度李彦宏在山西阳泉建立数据中心一样，京东的第一个自建数据中心也建在刘强东的老家江苏宿迁。这个IDC被称为京东云华东数据中...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e4%ba%ac%e4%b8%9c" rel="tag">京东</a>, <a href="http://www.yunweipai.com/tags/%e6%95%b0%e6%8d%ae%e4%b8%ad%e5%bf%83" rel="tag">数据中心</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 595</span>
+						<span class="loves">点赞 0</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-07 21:45</span>
+						<span class="date" id="date2">11天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22459.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/1-250x165.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="监控" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22459.html" rel="bookmark" target=_blank>						运维必知必会的监控知识体系全梳理<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>作者介绍
+徐亮伟，江湖人称标杆徐，曾负责大规模集群架构自动化运维工作。擅长自动化运维，并且在分布式、Python自动化、云计算虚拟...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e7%9b%91%e6%8e%a7%e4%bd%93%e7%b3%bb" rel="tag">监控体系</a>, <a href="http://www.yunweipai.com/tags/%e7%9b%91%e6%8e%a7%e7%9f%a5%e8%af%86" rel="tag">监控知识</a>, <a href="http://www.yunweipai.com/tags/yunwei" rel="tag">运维</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 1.3k</span>
+						<span class="loves">点赞 7</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-05 23:23</span>
+						<span class="date" id="date2">13天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22467.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/001-250x165.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22467.html" rel="bookmark" target=_blank>						运维不迷茫，腾讯运维工程师转型升级之路<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+作者：李光 （腾讯运营规划高级工程师与产品经理）
+导言：在工作中你是否遇到过困惑和迷茫的时期，总是有解决不完的问题，救不完...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e8%85%be%e8%ae%af" rel="tag">腾讯</a>, <a href="http://www.yunweipai.com/tags/yunwei" rel="tag">运维</a>, <a href="http://www.yunweipai.com/tags/%e8%bf%90%e7%bb%b4%e5%b7%a5%e7%a8%8b%e5%b8%88" rel="tag">运维工程师</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 1.1k</span>
+						<span class="loves">点赞 4</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-05 13:30</span>
+						<span class="date" id="date2">13天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22441.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/11-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22441.html" rel="bookmark" target=_blank>						民生银行：我们的 ELK 日志分析平台<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+
+作者简介
+詹玉林
+民生银行系统管理中心数据库运维工程师。曾作为研发工程师开发过银行核心系统，IBM数据库支持工程师，现关注于大...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/elk" rel="tag">ELK</a>, <a href="http://www.yunweipai.com/tags/%e6%97%a5%e5%bf%97%e5%88%86%e6%9e%90" rel="tag">日志分析</a>, <a href="http://www.yunweipai.com/tags/%e6%b0%91%e7%94%9f%e9%93%b6%e8%a1%8c" rel="tag">民生银行</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 870</span>
+						<span class="loves">点赞 0</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-05 11:30</span>
+						<span class="date" id="date2">14天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22384.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/1-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="腾讯" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22384.html" rel="bookmark" target=_blank>						腾讯业务监控的修炼之路<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+作者介绍
+李光：现任职于腾讯社交网络运营部/织云产品团队，负责织云监控告警平台规划与运维新产品开发工作，多年业务运维、运营...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e4%b8%9a%e5%8a%a1%e7%9b%91%e6%8e%a7" rel="tag">业务监控</a>, <a href="http://www.yunweipai.com/tags/%e7%9b%91%e6%8e%a7" rel="tag">监控</a>, <a href="http://www.yunweipai.com/tags/%e8%85%be%e8%ae%af" rel="tag">腾讯</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 780</span>
+						<span class="loves">点赞 1</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-04 23:22</span>
+						<span class="date" id="date2">14天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22353.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/09/001-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="乐视" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22353.html" rel="bookmark" target=_blank>						揭秘乐视MySQL数据库架构与运维实践<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>
+讲师介绍
+
+陶会祥
+乐视云数据库负责人
+
+
+
+先后任职于人人网、新浪、多点等公司。 期间任高级DBA，数据库架构师等职。
+拥有丰富的数据...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/mysql" rel="tag">mysql</a>, <a href="http://www.yunweipai.com/tags/%e4%b9%90%e8%a7%86" rel="tag">乐视</a>, <a href="http://www.yunweipai.com/tags/%e6%95%b0%e6%8d%ae%e5%ba%93" rel="tag">数据库</a>, <a href="http://www.yunweipai.com/tags/%e8%bf%90%e7%bb%b4%e5%ae%9e%e8%b7%b5" rel="tag">运维实践</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 1.1k</span>
+						<span class="loves">点赞 2</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-09-01 16:43</span>
+						<span class="date" id="date2">17天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22341.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/05/linux-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Linux" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22341.html" rel="bookmark" target=_blank>						常用的 wget 参数详解<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>wget 是一个从网络上自动下载文件的自由工具，支持通过 HTTP、HTTPS、FTP 三个最常见的 TCP/IP协议 下载，并可以使用 HTTP 代理。&#8221;wget&#82...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/linux%e5%91%bd%e4%bb%a4" rel="tag">Linux命令</a>, <a href="http://www.yunweipai.com/tags/wget" rel="tag">wget</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/2/" title="Gavin" class="avatar">
+								Gavin							</a>
+						</span>
+						<span class="views">阅读 1k</span>
+						<span class="loves">点赞 1</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-08-30 13:35</span>
+						<span class="date" id="date2">19天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22333.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/07/01-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Linux" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22333.html" rel="bookmark" target=_blank>						10个不得不知道的"系统进程"<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>在日常的运维工作中，当我们习惯性的执行ps命令后会看到很多“奇奇怪怪”的进程，而这些进程大部门都是系统的内核进程。很多同学对...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e7%b3%bb%e7%bb%9f%e8%bf%9b%e7%a8%8b" rel="tag">系统进程</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/2/" title="Gavin" class="avatar">
+								Gavin							</a>
+						</span>
+						<span class="views">阅读 1.6k</span>
+						<span class="loves">点赞 2</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-08-27 11:40</span>
+						<span class="date" id="date2">22天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22319.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/08/33-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="机房" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22319.html" rel="bookmark" target=_blank>						双机房灾备架构搭建实践<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>1. 背景
+
+作为运维哥，每逢佳节倍担心，除了定期到机房贴符拜拜，我们还有什么办法，保障我们的服务不受硬件故障的困扰呢。
+对很多...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/%e5%8f%8c%e6%9c%ba%e6%88%bf" rel="tag">双机房</a>, <a href="http://www.yunweipai.com/tags/%e6%9e%b6%e6%9e%84%e6%90%ad%e5%bb%ba" rel="tag">架构搭建</a>, <a href="http://www.yunweipai.com/tags/%e7%81%be%e5%a4%87" rel="tag">灾备</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 1.6k</span>
+						<span class="loves">点赞 3</span>
+						<span class="comment">评论 0</span>
+						<span class="date" id="date1">2017-08-23 12:21</span>
+						<span class="date" id="date2">26天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+			<!-- 文章块 开始-->
+			<div class="blogPost">
+				<div class="left_info hidden-phone">
+					<!-- 缩略图 开始-->
+					<div class="avatar">
+						<a href="http://www.yunweipai.com/archives/22303.html" rel="bookmark" class="btn-avatar" target=_blank><img width="250" height="165" src="http://tektea-img.b0.upaiyun.com/blog/2017/07/1-250x165.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="系统" /></a>
+						<a class="cat-link" href="http://www.yunweipai.com/category/jingyan">运维干货<i></i></a>
+					</div>
+					<!-- 缩略图 结束-->
+
+				</div>
+
+				<!-- 摘要块 开始-->
+				<div class="right_info">
+					<div class="title">
+						<a href="http://www.yunweipai.com/archives/22303.html" rel="bookmark" target=_blank>						运维开发实践：基于Sentry搭建错误日志监控系统<i></i></a>
+					</div>
+					<div class="excerpt">
+						<p>错误日志监控也可称为业务逻辑监控, 旨在对业务系统运行过程中产生的错误日志进行收集归纳和监控告警。似乎有那么点曾相识？没错&...</p>
+					</div>
+					<div class="postinfo">
+						<span class="tag"><a href="http://www.yunweipai.com/tags/sentry" rel="tag">Sentry</a>, <a href="http://www.yunweipai.com/tags/%e6%97%a5%e5%bf%97%e7%9b%91%e6%8e%a7" rel="tag">日志监控</a>, <a href="http://www.yunweipai.com/tags/%e8%bf%90%e7%bb%b4%e5%bc%80%e5%8f%91" rel="tag">运维开发</a></span>
+						<span class="author">
+							<a href="http://www.yunweipai.com/user/32/" title="小码哥" class="avatar">
+								小码哥							</a>
+						</span>
+						<span class="views">阅读 1.8k</span>
+						<span class="loves">点赞 3</span>
+						<span class="comment">评论 1</span>
+						<span class="date" id="date1">2017-08-23 11:15</span>
+						<span class="date" id="date2">27天前</span>
+					</div>
+				</div>
+				<!-- 摘要块 结束-->
+
+			</div>
+			<!-- 文章块 结束-->
+
+		</div>
+
+
+<div class="clear"></div><div class="pagination"><a href='http://www.yunweipai.com/category/jingyan' class='current'>1</a><a href='http://www.yunweipai.com/category/jingyan/page/2'>2</a><a href='http://www.yunweipai.com/category/jingyan/page/3'>3</a><a href='http://www.yunweipai.com/category/jingyan/page/4'>4</a><a href='http://www.yunweipai.com/category/jingyan/page/5'>5</a><a href='http://www.yunweipai.com/category/jingyan/page/6'>6</a><a href='http://www.yunweipai.com/category/jingyan/page/7'>7</a><a href='http://www.yunweipai.com/category/jingyan/page/8'>8</a><a href='http://www.yunweipai.com/category/jingyan/page/9'>9</a><a href="http://www.yunweipai.com/category/jingyan/page/2" >></a><a href='http://www.yunweipai.com/category/jingyan/page/44' title='最后一页'>>|</a></div>
+
+
+	</div>
+
+	<div id="sidebar">
+
+<ul>
+
+<li class="cat_three"><h2><b>热门文章</b>			<span id="dspan3" class="span_out" onclick="seltab(3)">年</span>
+			<span id="dspan2" class="span_out" onclick="seltab(2)">月</span>
+			<span id="dspan1" class="span_on" onclick="seltab(1)">周</span>
+</h2>		<ul id="ul1" class="show">
+				<li><i>1</i><a href="http://www.yunweipai.com/archives/22663.html" title="Redis 备份、容灾及高可用实战">Redis 备份、容灾及高可用实战</a></li>
+				<li><i>2</i><a href="http://www.yunweipai.com/archives/22697.html" title="如何打造一个日均PV千万级别的大型系统？">如何打造一个日均PV千万级别的...</a></li>
+				<li><i>3</i><a href="http://www.yunweipai.com/archives/22675.html" title="运维团队践行的三种方式：简、智、深">运维团队践行的三种方式：简、...</a></li>
+				<li><i>4</i><a href="http://www.yunweipai.com/archives/22726.html" title="MySQL主从延迟复制实践及生产故障案例恢复实践">MySQL主从延迟复制实践及生产故...</a></li>
+				<li><i>5</i><a href="http://www.yunweipai.com/archives/22713.html" title="微软亚研院的AIOps底层算法： KPI快速聚类">微软亚研院的AIOps底层算法： K...</a></li>
+			</ul>
+		<ul id="ul2" class="hide">
+				<li><i>1</i><a href="http://www.yunweipai.com/archives/22303.html" title="运维开发实践：基于Sentry搭建错误日志监控系统">运维开发实践：基于Sentry搭建错...</a></li>
+				<li><i>2</i><a href="http://www.yunweipai.com/archives/22333.html" title="10个不得不知道的&#8221;系统进程&#8221;">10个不得不知道的&#8221;系统进程...</a></li>
+				<li><i>3</i><a href="http://www.yunweipai.com/archives/22284.html" title="论DBA的自我修养-从删库跑路到删除获刑无法跑路">论DBA的自我修养-从删库跑路到...</a></li>
+				<li><i>4</i><a href="http://www.yunweipai.com/archives/22319.html" title="双机房灾备架构搭建实践">双机房灾备架构搭建实践</a></li>
+				<li><i>5</i><a href="http://www.yunweipai.com/archives/22276.html" title="Linux高手入门：Linux五种I/O模型">Linux高手入门：Linux五种I/O模型</a></li>
+				<li><i>6</i><a href="http://www.yunweipai.com/archives/22629.html" title="从苦逼到牛逼，详解Linux运维工程师的打怪升级之路">从苦逼到牛逼，详解Linux运维工...</a></li>
+				<li><i>7</i><a href="http://www.yunweipai.com/archives/22459.html" title="运维必知必会的监控知识体系全梳理">运维必知必会的监控知识体系全...</a></li>
+				<li><i>8</i><a href="http://www.yunweipai.com/archives/22294.html" title="MySQL高可用数据库内核深度优化的四重定制">MySQL高可用数据库内核深度优化...</a></li>
+			</ul>
+		<ul id="ul3" class="hide">
+				<li><i>1</i><a href="http://www.yunweipai.com/archives/10358.html" title="容器，你还只用Docker吗？（下）">容器，你还只用Docker吗？（下）...</a></li>
+				<li><i>2</i><a href="http://www.yunweipai.com/archives/10352.html" title="京东亿级商品搜索核心技术解密">京东亿级商品搜索核心技术解密...</a></li>
+				<li><i>3</i><a href="http://www.yunweipai.com/archives/10501.html" title="高性能高并发系统的稳定性保障">高性能高并发系统的稳定性保障...</a></li>
+				<li><i>4</i><a href="http://www.yunweipai.com/archives/10461.html" title="如何基于日志，同步实现数据的一致性和实时抽取?">如何基于日志，同步实现数据的...</a></li>
+				<li><i>5</i><a href="http://www.yunweipai.com/archives/10365.html" title="MySQL链式复制加速神器: MaxScale Binlog Server">MySQL链式复制加速神器: MaxScale ...</a></li>
+				<li><i>6</i><a href="http://www.yunweipai.com/archives/10372.html" title="携程：上万坐席呼叫中心异地双活架构及系统设计">携程：上万坐席呼叫中心异地双...</a></li>
+				<li><i>7</i><a href="http://www.yunweipai.com/archives/10401.html" title="硅谷不需要产品经理">硅谷不需要产品经理</a></li>
+				<li><i>8</i><a href="http://www.yunweipai.com/archives/10389.html" title="Oracle DBCA高级玩法：从模板选择、脚本调用到多租户">Oracle DBCA高级玩法：从模板选择...</a></li>
+			</ul>
+
+<script type="text/javascript">
+//文章排行标签页的切换
+function seltab(id)
+{
+	for (var i = 1; i < 4; i++) {
+		if( i == id) {
+			document.getElementById("dspan"+i).className ="span_on";
+			document.getElementById("ul"+i).className="show";
+		}
+		else {
+			document.getElementById("dspan"+i).className ="span_out";
+			document.getElementById("ul"+i).className="hide";
+		}
+	}
+
+}
+</script>
+
+</li><li class="sidebar_noborder"><a href="http://www.yunweipai.com/tougao" target=_blank><img src="http://tektea-img.b0.upaiyun.com/blog/2017/03/yunw.png"></a></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="bottom">
+
+	<div id="footer">
+		<div id="foot_navi">
+		<ul id="menu-navi_foot"><li><a href="http://www.yunweipai.com">网站首页</a></li><li><a href="http://www.yunweipai.com/aboutus">关于我们</a></li><li><img src="http://www.yunweipai.com/wp-content/themes/zYwp/images/logo_bottom.png"></li><li><a href="http://www.yunweipai.com/cooperation">社区合作</a></li><li><a href="http://www.yunweipai.com/tougao">欢迎投稿</a></li></ul>
+		</div>
+
+		<div id="footer_social">
+		</div>
+
+	</div>
+
+	<div id="foot_copy">
+	Copyright © 2012-2017 YUNWEIPAI.COM - 运维派 - 粤ICP备14090526号-3
+<span style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256229770'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256229770' type='text/javascript'%3E%3C/script%3E"));</script></span>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e026ec229e9ac08871f0e3cf4c4ea196";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	</div>
+
+</div>
+
+
+	<!--重复投票提示窗口-->
+	<div id="div_rating_msg" style="display: none; " class="div_cancel_rating">
+		<div class="collect_head"><a href="javascript:void(0);" onclick="hide()">关闭</a></div>
+		<div id="collect_body" class="collect_body"><div class="collectSuccess"><table><tr><td>您已经评过分</td></tr></table></div></div>
+
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var zratings = {"z_ratings_url":"http://www.yunweipai.com/wp-admin/admin-ajax.php"};
+/* ]]> */
+</script>
+	<script type="text/javascript" src="http://www.yunweipai.com/wp-content/themes/zYwp/z-ratings/z-ratings.js?ver=1.0"></script>
+	<script type='text/javascript' src='http://www.yunweipai.com/wp-includes/js/wp-embed.min.js?ver=4.8.1'></script>
+
+<div id="toolbox">
+	<span class="rweixin" href="#">扫二维码
+		<div class="floatbox">
+		扫二维码
+		</div>
+	</span>
+	<a class="backTop" href="javascript:void(0)" onclick="toTop();">返回顶部</a>
+</div>
+
+
+<script type="text/javascript">
+$(window).scroll(function(e) {
+
+	//固定顶部菜单
+	if ($(window).scrollTop() > 150 && $(window).width()>1006) {
+		$('#toolbox').fadeIn();
+	}
+	else{
+		$('#toolbox').fadeOut();
+	}
+});
+
+$(".menu1").click(function(){
+	if($("#header-right").css("display")=='none') {
+		$('.menu1').removeClass('menuopen').addClass('menuclose');
+		$("#header-right").slideDown();
+	} else {
+		$('.menu1').removeClass('menuclose').addClass('menuopen');
+		$("#header-right").slideUp();
+	}
+});
+
+function toTop() {
+	$('body,html').animate({scrollTop:0},500);
+	return false;
+}
+
+function showSearch() {
+	$('#btn_search').addClass('hide');
+	$('#navi').addClass('hide');
+	$('#btn_tougao').addClass('hide');
+	$('#search').addClass('show');
+}
+function closeSearch() {
+	$('#search').removeClass('show');
+	$('#navi').removeClass('hide');
+	$('#btn_tougao').removeClass('hide');
+	$('#btn_search').removeClass('hide');
+}
+</script>
+
+
+</body>
+</html>
